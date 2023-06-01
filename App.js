@@ -45,7 +45,11 @@ export default function App() {
   const [statusBarHeight, setStatusBarHeight] = useState(0);
 
   const handleNavigationChange = (navState) => {
-    if (navState.url.slice(-4) === "chat") setTopAreaColor("#D0435B");
+    if (
+      navState.url.slice(-4) === "chat" ||
+      navState.url.slice(-6) === "notice"
+    )
+      setTopAreaColor("#D0435B");
     else setTopAreaColor("#F1E9E9");
   };
 
